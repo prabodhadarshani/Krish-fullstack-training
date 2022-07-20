@@ -1,0 +1,6 @@
+[{ "id":1, "icon":"https://robohash.org/2600:6c5e:357f:e274:dd4:78bb:b35f:924d.png", "firstName":"Prabodha", "lastName":"Darshani","designation":"Learner","insuranceBalance":1050.03,"rbtProgress":25},
+{ "id":2, "icon":"https://robohash.org/2600:6c5e:357f:e274:dd4:78bb:b35f:924d.png", "firstName":"Himansa", "lastName":"Gimhana","designation":"Manager","insuranceBalance":1050.03,"rbtProgress":35},
+{ "id":3, "icon":"https://robohash.org/2600:6c5e:357f:e274:dd4:78bb:b35f:924d.png", "firstName":"Lakidu", "lastName":"Silva","designation":"Accountant","insuranceBalance":1050.03,"rbtProgress":75}
+
+
+]
