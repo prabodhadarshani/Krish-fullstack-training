@@ -1,3 +1,37 @@
 <div>
-  <em-employees></em-employees>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <a class="navbar-brand text-white ml-2" href="#"> COSMOS CMS</a>
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" routerLink="/home" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-white" routerLink="/employees" href="#">List Emploees</a>
+        </li>
+      
+
+        <li class="nav-item">
+          <a class="nav-link active text-white " href="#"  >Search</a>
+        </li>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+
+
+</div>
+
+
+<div>
+  <div>
+    <router-outlet></router-outlet>
+</div>
 </div>
