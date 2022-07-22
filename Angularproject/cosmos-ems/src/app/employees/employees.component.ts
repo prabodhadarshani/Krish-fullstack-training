@@ -1,7 +1,7 @@
 import { Component,  OnDestroy, OnInit } from '@angular/core';
 import { EmployeeService } from './employee.service';
 import { Subscription } from 'rxjs';
-// import  employees  from './data/employees.json';
+import  employees  from './data/employees.json';
 import { Employee } from './Employees.model';
 
 @Component({
@@ -12,10 +12,10 @@ import { Employee } from './Employees.model';
 export class EmployeesComponent implements OnInit , OnDestroy{
 
   title:string ="Employee Management Solutions"
-  // employees:Employee[] = employees;
-  employees!:Employee[];
-  // filteredEmployees:Employee[] = employees;
-  filteredEmployees!:Employee[];
+   employees:Employee[] = employees;
+ // employees!:Employee[];
+   filteredEmployees:Employee[] = employees;
+  //filteredEmployees!:Employee[];
   showIcon:boolean =false;
   substriber!: Subscription;
   message:string='';
