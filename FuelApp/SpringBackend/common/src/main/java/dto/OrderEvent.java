@@ -7,11 +7,15 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
+import java.util.Date;
+
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "order_event")
 public class OrderEvent implements Serializable {
     @Id
 //    @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,6 +29,7 @@ public class OrderEvent implements Serializable {
     private String gasStationName;
     private int  capacity;
     private String type;
+    private Date shedule_date;
 
 
 

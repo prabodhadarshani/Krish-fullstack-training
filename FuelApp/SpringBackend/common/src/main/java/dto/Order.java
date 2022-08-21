@@ -22,7 +22,8 @@ public class Order {
     private int  capacity;
     private String type;
     private String status;
-    private Date createDate;
+    private Date shedule_date;
+  //  private Date createDate;
 
 
 

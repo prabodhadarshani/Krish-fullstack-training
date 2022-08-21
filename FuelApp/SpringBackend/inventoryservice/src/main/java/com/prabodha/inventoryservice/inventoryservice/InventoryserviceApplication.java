@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EntityScan(basePackages = "dto")
+//@EnableJpaRepositories("com.prabodha.orderservice.orderservice.Repository")
 public class InventoryserviceApplication {
 
 	public static void main(String[] args) {

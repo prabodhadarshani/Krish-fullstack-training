@@ -12,7 +12,8 @@ public class kafkaTopicConfig {
 
     @Value("${spring.kafka.topic.name}")
     private String topicName;
-   // private String OrderResult;
+    @Value("${spring.kafka.topic.name1}")
+    private String orderResult;
 
     // spring bean for kafka topic
     @Bean
@@ -20,9 +21,14 @@ public class kafkaTopicConfig {
         return TopicBuilder.name(topicName)
                 .build();
     }
+//    @Bean
+//    public NewTopic topicOrderResult(){
+//        return TopicBuilder.name("OrderResult")
+//                .build();
+//    }
     @Bean
-    public NewTopic topicOrderResult(){
-        return TopicBuilder.name("OrderResult")
+    public NewTopic topicSheduleResult() {
+        return TopicBuilder.name(orderResult)
                 .build();
     }
 }

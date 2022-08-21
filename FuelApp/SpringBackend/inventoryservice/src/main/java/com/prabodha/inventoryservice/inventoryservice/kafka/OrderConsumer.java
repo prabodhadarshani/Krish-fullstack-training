@@ -4,7 +4,10 @@ package com.prabodha.inventoryservice.inventoryservice.kafka;
 //import com.prabodha.basecommons.basecommons.dto.OrderEvent;
 
 import com.prabodha.inventoryservice.inventoryservice.Repository.InventoryRepository;
+
+import com.prabodha.inventoryservice.inventoryservice.Repository.OrderRepository;
 import com.prabodha.inventoryservice.inventoryservice.Service.ManageService;
+//import com.prabodha.orderservice.orderservice.Repository.OrderRepository;
 import dto.Inventory;
 import dto.OrderEvent;
 import org.slf4j.Logger;
@@ -24,10 +27,14 @@ public class OrderConsumer {
     @Autowired
    InventoryRepository repository;
 
+   @Autowired
+   OrderRepository orderRepository;
+
     private static final Logger LOGGER = LoggerFactory.getLogger(OrderConsumer.class);
 
-    public OrderConsumer(InventoryRepository repository, KafkaTemplate<String, OrderEvent> template) {
+    public OrderConsumer(OrderRepository orderRepository, InventoryRepository repository, KafkaTemplate<String, OrderEvent> template) {
         this.repository = repository;
+        this.orderRepository = orderRepository;
         this.template = template;
     }
 
@@ -56,9 +63,10 @@ public class OrderConsumer {
                      event.setStatus("REJECT");
                  }
 
-         //   template.send("order_topics", event.getOrderId(), event);
+
             LOGGER.info(String.format("Stock Allocated the order in Order service => %s", event.toString()));
 
-
+              orderRepository.save(event);
+           // template.send("result_shedule", event);
         }
     }}

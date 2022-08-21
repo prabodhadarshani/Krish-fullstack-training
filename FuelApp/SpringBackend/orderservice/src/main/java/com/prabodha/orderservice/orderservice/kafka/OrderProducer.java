@@ -11,6 +11,7 @@ import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 
 
 @Service
@@ -18,6 +19,7 @@ public class OrderProducer {
     private static final Logger LOGGER = LoggerFactory.getLogger(OrderProducer.class);
 
     private NewTopic topic;
+
 
     private KafkaTemplate<String, OrderEvent> kafkaTemplate;
 
@@ -37,4 +39,9 @@ public class OrderProducer {
                 .build();
         kafkaTemplate.send(message);
     }
+
+
+//    public List<OrderEvent> getMessage(List<OrderEvent> orderEvent) {
+//        return orderEvent;
+//    }
 }
